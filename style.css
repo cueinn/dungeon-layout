@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@300&display=swap');
+
+:root {
+  --color-neutral-darker: #333;
+  --color-neutral-dark: #4F4F4F;
+  --color-neutral-main: #B1B1B1;
+  --color-action: #2D9CDB;
+  --color-gold: #DBC994;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-neutral-dark);
+  color: var(--color-neutral-main);
+  font-size: 2vh;
+  text-align: center;
+  line-height: 1;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  margin: 3vh 0 2vh;
+  font-size: 4vh;
+  line-height: 1;
+  color: var(--color-gold);
+  font-family: serif;
+  font-family: 'DM Serif Display', serif;
+}
+
+p {
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  margin-top: 8vh;
+  width: 72vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.labels {
+  display: flex;
+  position: absolute;
+  top: -4vh;
+  
+}
+.labels span {
+  display: block;
+  width: 12vw;
+}
+.labels.vertical {
+  flex-direction: column;
+  width: auto;
+  top: 0;
+  left: -8vw;
+  
+}
+.labels.vertical > span {
+  padding: 4vh 0;
+}
+
+.room {
+  width: 12vw;
+  height: 10vh;
+  background: var(--color-neutral-darker);
+  border: 2px solid var(--color-neutral-dark);
+  transition: background .2s ease-in-out;
+  cursor: pointer;
+  
+}
+.room.active {
+  background: var(--color-action);
+}
+
+.patterns{
+  display: flex;
+  margin-top: 1vh;
+}
+  .pattern-item {
+    padding: 4vh 1vw;
+    display: flex;
+    flex-direction: column;
+  }
+    .pattern-item img {
+      height: 5vh;
+      margin-bottom: 2vh;
+    }
+
+.reset {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+  .resetSquare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5rem;
+
+    width: 3rem;
+    aspect-ratio: 1;
+
+    font-family: 'DM Serif Display', serif;
+
+    background: var(--color-neutral-darker);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+  }
+  .reset:hover .resetSquare {
+    box-shadow: 0 0 0 .25rem #666;
+  }
+  .reset:active .resetSquare {
+    transform: scale(.9);
+  }
