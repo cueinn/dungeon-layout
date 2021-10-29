@@ -29,4 +29,7 @@ document.addEventListener('keydown', function(e){
   if (e.key === 'r') {
     resetRooms()
   }
+  if (e.code === 'Space') {
+    randomize()
+  }
 });
